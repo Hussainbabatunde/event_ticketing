@@ -13,7 +13,12 @@ const Login=({navigation})=>{
     const Forgotpage=()=>{
         navigation.navigate("Forgotpassword")
     }
-
+    const handleSignup=()=>{
+        navigation.navigate("SignUp")
+    }
+    const handleLogin=()=>{
+        navigation.navigate("Dashboard", {screen : "Eventhome"})
+    }
     return(
         <KeyboardAvoidingView  behavior={Platform.OS === "ios"? "padding" :""} style={styles.Wholeview}>
             <Image source={logo} style={styles.logocomp}/>
@@ -34,11 +39,11 @@ size={20} color='gray' onPress={changeIcon}/>
                     <View style={styles.forgotten}>
                         <Text style={styles.forgotpassword} onPress={Forgotpage}>Forgot Password?</Text>
                     </View>
-                    <TouchableOpacity style={styles.siginbigbut}>
-                        <Text style={styles.signinword}>SIGN IN</Text>
+                    <TouchableOpacity style={styles.siginbigbut} onPress={handleLogin}>
+                        <Text style={styles.signinword} onPress={handleLogin} >SIGN IN</Text>
                     </TouchableOpacity>
                     <View style={styles.signupwhole}>
-                    <Text style={styles.signupside}>Dont have an account? <Text style={styles.signupword}>Sign up</Text></Text>
+                    <Text style={styles.signupside}>Dont have an account? <Text style={styles.signupword} onPress={handleSignup}>Sign up</Text></Text>
                     </View>
             </View>
         </KeyboardAvoidingView>
