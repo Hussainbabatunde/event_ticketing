@@ -63,7 +63,7 @@ const styles= StyleSheet.create({
         right: 0,
         backgroundColor: "rgb(238,238,238)",
         padding: 8,
-        borderRadius: "50%",
+        borderRadius: 50,
         top: 10
     },
     details:{

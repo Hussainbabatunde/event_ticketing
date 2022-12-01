@@ -192,8 +192,8 @@ const styles= StyleSheet.create({
         backgroundColor: "rgb(116,131,237)",
         padding: 20,
         paddingTop: 50,
-        borderBottomLeftRadius: "30px",
-        borderBottomRightRadius: "30px"
+        borderBottomLeftRadius: 30,
+        borderBottomRightRadius: 30
     },
     notify_logo:{
         display: "flex",
@@ -210,7 +210,7 @@ const styles= StyleSheet.create({
     botbell:{
         backgroundColor: "rgb(103,119,254)",
         padding: 10,
-        borderRadius: "50%",
+        borderRadius: 50,
         position:"relative"
     },
     bot:{
@@ -237,19 +237,19 @@ const styles= StyleSheet.create({
     musicicon:{
         backgroundColor: "rgb(254,180,67)",
         padding: 5,
-        borderRadius: "50%",
+        borderRadius: 50,
         marginRight: 10
     },
     musicicon2:{
         backgroundColor: "rgb(250,108,161)",
         padding: 5,
-        borderRadius: "50%",
+        borderRadius: 50,
         marginRight: 10
     },
     musicicon3:{
         backgroundColor: "rgb(246,149,99)",
         padding: 5,
-        borderRadius: "50%",
+        borderRadius: 50,
         marginRight: 10
     },
     horicons_view:{
@@ -266,7 +266,7 @@ const styles= StyleSheet.create({
         borderColor:"gray",
         padding: 5,
         marginRight: 15,
-        borderRadius: "30%"
+        borderRadius: 30
     },
     trendingshow:{
         flexDirection: "row",
@@ -289,7 +289,7 @@ const styles= StyleSheet.create({
     },
     trendbox:{
         height: 210,
-        borderRadius: "20%",
+        borderRadius: 20,
         width: 280
     },
     trendeventsshow:{
@@ -315,7 +315,7 @@ const styles= StyleSheet.create({
         right: 30,
         backgroundColor: "rgb(162,157,156)",
         padding: 8,
-        borderRadius: "50%",
+        borderRadius: 50,
         top: 5
     },
     redheart2:{
@@ -323,7 +323,7 @@ const styles= StyleSheet.create({
         right: 30,
         backgroundColor: "rgb(227,234,252)",
         padding: 8,
-        borderRadius: "50%",
+        borderRadius: 50,
         top: 5
     },
     eventdetails:{
@@ -333,7 +333,7 @@ const styles= StyleSheet.create({
         width: "90%",
         marginLeft:"2%",
         padding: 5,
-        borderRadius: "20%",
+        borderRadius: 20,
         zIndex: 1000
     },
     upcomingeventdetails:{
@@ -344,7 +344,7 @@ const styles= StyleSheet.create({
         right:25,
         marginLeft:"2%",
         padding: 5,
-        borderRadius: "20%",
+        borderRadius: 20,
         zIndex: 1000
     },
     name_event:{
@@ -427,7 +427,7 @@ const styles= StyleSheet.create({
         width: "95%",
         marginLeft: "5%",
         height: 200,
-        borderRadius: "10%",
+        borderRadius: 10,
         marginBottom: 20
     },
     advertinvite:{

@@ -9,6 +9,8 @@ import Login from "../screen/Login";
 import Signup from "../screen/Signup";
 import { Ionicons } from '@expo/vector-icons';
 import TrendingEvent from "../screen/TrendingEvent";
+import EventDetails from "../screen/EventDetails";
+import Ticket from "../screen/Ticket";
 
 
 const Stack= createNativeStackNavigator();
@@ -60,6 +62,16 @@ function Navigation(){
                 <Stack.Screen
           name="TrendingEvent"
           component={TrendingEvent}
+          options={{ title: 'Trending Event',  headerShown: false }}
+        />
+        <Stack.Screen
+          name="EventDetails"
+          component={EventDetails}
+          options={{ title: 'Trending Event',  headerShown: false }}
+        />
+        <Stack.Screen
+          name="Ticket"
+          component={Ticket}
           options={{ title: 'Trending Event',  headerShown: false }}
         />
             </Stack.Navigator>

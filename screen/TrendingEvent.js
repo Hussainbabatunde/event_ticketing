@@ -1,5 +1,5 @@
 import React from "react"
-import { SafeAreaView, Text } from "react-native"
+import { Button, SafeAreaView, Text } from "react-native"
 import { View } from "react-native"
 import { Ionicons } from '@expo/vector-icons'; 
 import { StyleSheet } from "react-native";
@@ -7,11 +7,16 @@ import { Image } from "react-native";
 import boxed from "../assets/boxed.jpg"
 import sponsimg from "../assets/loginlogo.png";
 import { FontAwesome } from '@expo/vector-icons'; 
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const TrendingEvent= ({navigation})=>{
 
     const showTrending = ()=>{
         navigation.navigate("Dashboard", {screen : "Eventhome"})
+    }
+    const handleEventDetails= ()=>{
+        console.warn("it works")
+        navigation.navigate("EventDetails")
     }
     return(
         <SafeAreaView styles={styles.wholeTrend}>
@@ -19,7 +24,7 @@ const TrendingEvent= ({navigation})=>{
             <Ionicons name="arrow-back-outline" size={35} color="black" onPress={showTrending} />
             <Text style={styles.trendText}>Trending Events</Text>
             </View>
-            <View style={styles.wholecomp}>
+            <View style={styles.wholecomp} >
                 <Image source={boxed} style={styles.imgTrend}/>
                 <Text style={styles.name_ofevent}>Miami Carnival 2022 | Viva Londvdfdfdon</Text>
                 <View style={styles.location_events}>
@@ -37,6 +42,9 @@ const TrendingEvent= ({navigation})=>{
                     <FontAwesome name="heart" size={24} color="red"  />
                     </View>
                 </View>
+                <TouchableOpacity onPress={handleEventDetails} style={styles.view_button}>
+                <Text style={styles.view_event} onPress={handleEventDetails} >View</Text>
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     )
@@ -65,15 +73,16 @@ const styles= StyleSheet.create({
         marginLeft:"2.5%",
         padding: 10,
         marginTop: 20,
-        borderWidth: 1,
-        // shadowOffset:{
-        //     width: 0,
-        //     height: 1
-        // },
-        // shadowOpacity: 0.22,
-        // shadowRadius: 2.22,
-        // shadowColor:"gray",
-        // elevation: 3
+        shadowOffset:{
+            width: 0,
+            height: 1
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        shadowColor:"gray",
+        elevation: 3,
+        backgroundColor:"white",
+        borderRadius: 10
     },
     name_ofevent:{
         fontSize: 18,
@@ -124,8 +133,19 @@ const styles= StyleSheet.create({
         right: 0,
         backgroundColor: "rgb(162,156,156)",
         padding: 8,
-        borderRadius: "50%",
+        borderRadius: 50,
         top: 10
+    },
+    view_event:{
+        color: "white",
+        fontSize: 20
+    },
+    view_button:{
+        backgroundColor:"rgb(85,105,254)",
+        padding: 10,
+        justifyContent:"Center",
+        alignItems:"center",
+        borderRadius: 10
     }
 })
 
